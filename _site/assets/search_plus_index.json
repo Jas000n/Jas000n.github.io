@@ -1,0 +1,16 @@
+{"/pages/about/": {
+    "title": "About",
+    "keywords": "Jekyll",
+    "url": "/pages/about/",
+    "body": "This is an about page."
+  },"/pages/contact/": {
+    "title": "Contact",
+    "keywords": "Jekyll",
+    "url": "/pages/contact/",
+    "body": "This is an contact page."
+  },"/pages/design/draft/": {
+    "title": "Design Draft",
+    "keywords": "Jekyll",
+    "url": "/pages/design/draft/",
+    "body": "This is an draft page."
+  }}
