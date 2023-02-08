@@ -1,2 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-02-07T16:26:32+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jason’s Blog</title><subtitle>Jason&apos;s online notes, articles and documents.
-</subtitle><author><name>Jason</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-02-08T12:40:00+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jason’s Blog</title><subtitle>Jason&apos;s online notes, articles and documents.
+</subtitle><author><name>Jason</name></author><entry><title type="html">Biliup</title><link href="http://localhost:4000/jekyll/2023-02-08-biliup.html" rel="alternate" type="text/html" title="Biliup" /><published>2023-02-08T00:00:00+08:00</published><updated>2023-02-08T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/biliup</id><content type="html" xml:base="http://localhost:4000/jekyll/2023-02-08-biliup.html"><![CDATA[<h1 id="biliup自动录制投稿工具">BiliUp自动录制投稿工具</h1>
+<p>自动录制平台主播上传至B站投稿</p>
+<h2 id="1-安装">1. 安装</h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>biliup
+
+pip <span class="nb">install </span>quickjs
+
+<span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>nodejs <span class="nt">-y</span>
+
+</code></pre></div></div>
+<h2 id="2-录制">2. 录制</h2>
+<p>创建文件夹：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>biliup_home
+
+<span class="nb">cd </span>biliup_home
+
+</code></pre></div></div>
+<p>编写配置文件：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim config.toml
+
+</code></pre></div></div>
+<p>将以下内容写入：</p>
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 以下为必填项</span>
+<span class="nn">[streamers."1xx直播录像"]</span> <span class="c"># 设置直播间1</span>
+<span class="py">url</span> <span class="p">=</span> <span class="p">[</span><span class="s">"https://www.twitch.tv/1xx"</span><span class="p">]</span>
+<span class="py">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s">"biliup"</span><span class="p">]</span>
+
+<span class="nn">[streamers."2xx直播录像"]</span> <span class="c"># 设置直播间2</span>
+<span class="py">url</span> <span class="p">=</span> <span class="p">[</span><span class="s">"https://www.twitch.tv/2xx"</span><span class="p">]</span>
+<span class="py">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s">"biliup"</span><span class="p">]</span>
+</code></pre></div></div>
+<ul>
+  <li>tags为稿件标签，随意填写，如“主播录制”，“炉石传说”等，但不能超过12个</li>
+  <li>streamers为投稿稿件名字</li>
+  <li>url为直播间地址</li>
+</ul>
+
+<p>开始录制</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>biliup start
+</code></pre></div></div>
+<p>检查脚本是否正确运行</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps <span class="nt">-A</span> |grep biliup <span class="c">#能找到进程则运行成功</span>
+</code></pre></div></div>
+<h2 id="投稿到b站">投稿到b站</h2>
+<p>根据自己的机器去https://github.com/ForgQi/biliup-rs/releases找匹配的可执行文件</p>
+
+<p>例如我的机器：linux, x86_64</p>
+
+<p>下载文件：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://github.com/ForgQi/biliup-rs/releases/download/v0.1.15/biliupR-v0.1.15-x86_64-linux.tar.xz
+</code></pre></div></div>
+<p>解压：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvJf</span> <span class="k">*</span>.tar.xz
+</code></pre></div></div>
+<p>登陆获得cookie：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./biliup login
+</code></pre></div></div>
+<p>主播下播后会自动投稿，注意需要把cookie和config.toml放在同一级目录下。</p>]]></content><author><name>Jason</name></author><category term="Jekyll" /><summary type="html"><![CDATA[BiliUp自动录制投稿工具 自动录制平台主播上传至B站投稿 1. 安装 ```shell pip install biliup]]></summary></entry></feed>
