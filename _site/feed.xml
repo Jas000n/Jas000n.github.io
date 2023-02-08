@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-02-08T12:40:00+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jason’s Blog</title><subtitle>Jason&apos;s online notes, articles and documents.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-02-08T12:59:02+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jason’s Blog</title><subtitle>Jason&apos;s online notes, articles and documents.
 </subtitle><author><name>Jason</name></author><entry><title type="html">Biliup</title><link href="http://localhost:4000/jekyll/2023-02-08-biliup.html" rel="alternate" type="text/html" title="Biliup" /><published>2023-02-08T00:00:00+08:00</published><updated>2023-02-08T00:00:00+08:00</updated><id>http://localhost:4000/jekyll/biliup</id><content type="html" xml:base="http://localhost:4000/jekyll/2023-02-08-biliup.html"><![CDATA[<h1 id="biliup自动录制投稿工具">BiliUp自动录制投稿工具</h1>
 <p>自动录制平台主播上传至B站投稿</p>
 <h2 id="1-安装">1. 安装</h2>
@@ -42,7 +42,7 @@ pip <span class="nb">install </span>quickjs
 <p>检查脚本是否正确运行</p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps <span class="nt">-A</span> |grep biliup <span class="c">#能找到进程则运行成功</span>
 </code></pre></div></div>
-<h2 id="投稿到b站">投稿到b站</h2>
+<h2 id="3-投稿到b站">3. 投稿到b站</h2>
 <p>根据自己的机器去https://github.com/ForgQi/biliup-rs/releases找匹配的可执行文件</p>
 
 <p>例如我的机器：linux, x86_64</p>
