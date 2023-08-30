@@ -13,6 +13,11 @@
     "keywords": "Jekyll",
     "url": "/pages/design/draft/",
     "body": "This is an draft page."
+  },"/jekyll/2023-08-30-Deploy-Online-Video-System.html": {
+    "title": "Deploy Online Video System",
+    "keywords": "Jekyll",
+    "url": "/jekyll/2023-08-30-Deploy-Online-Video-System.html",
+    "body": "1. Download Necessary File $ git clone https://github.com/Jas000n/online_video_sys.git 2. Setup Database # DML &amp; DDL all stored in ./online_video_sys/sql, execute all of them in MySQL # In each SpringBoot service, configure the address and password for MySQL in resources/application.properties spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver spring.datasource.url=jdbc:mysql://localhost:3306/cilicili?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=UTC spring.datasource.username=YOUR_USERNAME spring.datasource.password=YOUR_PASSWORD # Register Alibaba Cloud service, get the access_key &amp; access_id; fill in the blank in resources/application.properties, for Services: VOD(video on demand), OSS(object storage service), SMS(short message service) #Start Redis $ redis-server 3. Start Nacos $ cd /YOUR_DIRECTORY/online_video_sys/Nacos/bin $ sh startup.sh -m standalone 4. Start Application Start all SpringBoot Service Start both front end service, cili_front(for user to browse, watch and purchase) &amp; cili_Back(for administrator to manage the website and view statistics) It should look like this:"
   },"/jekyll/2023-02-08-biliup.html": {
     "title": "Biliup",
     "keywords": "Jekyll",
