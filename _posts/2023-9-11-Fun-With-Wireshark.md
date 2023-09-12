@@ -6,8 +6,8 @@ category: Jekyll
 layout: post
 
 ---
-
-# Tracking Traffic
+# Wireshark Unleashed:Popular Tricks and Insights
+## Tracking Traffic
 Wireshark offers a feature called "statistics," which aids in honing in on specific conversations or endpoints.
 It's found on the navigation bar. For this task, we will select 'conversation'.
 ![Tracking_traffic](/assets/pics/wireshark/tracking_traffic.png)
@@ -17,7 +17,7 @@ Right-click on the conversation and choose "Apply a->b as Filter > Selected". In
 ![Tracking_traffic](/assets/pics/wireshark/tracking_traffic3.png)
 
 
-# Detect HTTP
+## Detect HTTP
 I will first use a filter to display the HTTP response time for each HTTP request.
 
 ```
@@ -35,7 +35,7 @@ HTTP response status codes are categorized into five classes:
 * 4xx represents client errors, suggesting that there seems to be a mistake made by the client; 
 * 5xx signifies server errors, indicating the server failed to fulfill a valid request.
 
-# FTP Fundamentals
+## FTP Fundamentals
 To display FTP request and response packets in Wireshark, use the following filter:
 ```
 ftp
@@ -49,7 +49,7 @@ FTP (File Transfer Protocol) utilizes three-digit response codes to signify the 
 * Transient negative completion replies (4xx) indicate a temporary rejection, with 421 suggesting the service isn't available. 
 * Permanent negative completion replies (5xx) represent definitive action failure, with codes like 550 showing the requested action wasn't taken due to file unavailability.
 
-# DHCP Decoded
+## DHCP Decoded
 * Layer of the OSI model:
 DHCP Discover packets can be found at the Application Layer (Layer 7) of the OSI model. However, when discussing protocols in terms of the OSI model, it's important to note that DHCP primarily operates at the Application Layer, but it also uses functionalities of the Transport Layer and Network Layer for its operations.
 * Type of packet: 
@@ -63,5 +63,5 @@ DHCP Discover is a broadcast packet. It's the initial message sent by a client w
     * Destination Port:67 (DHCP servers listen on this port for client requests.)
 The DHCP Discover packet is the first step in the DHCP four-step process (Discover, Offer, Request, and Acknowledge) used to obtain network configuration parameters from the DHCP server. 
 
-# DNS Demystified
+## DNS Demystified
 DNS (Domain Name System) queries primarily use the UDP (User Datagram Protocol) as their transport layer protocol. Specifically, DNS queries typically use UDP on port 53. However, it's worth noting that DNS can also use TCP (Transmission Control Protocol) for tasks that require reliable delivery, such as zone transfers or when the response data size exceeds 512 bytes and cannot be fit into a single UDP packet. In those cases, DNS also uses TCP on port 53.
