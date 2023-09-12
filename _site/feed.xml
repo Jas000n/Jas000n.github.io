@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-11T22:23:13-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jason’s Blog</title><subtitle>Jason&apos;s online notes, articles and documents.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-09-11T22:26:14-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jason’s Blog</title><subtitle>Jason&apos;s online notes, articles and documents.
 </subtitle><author><name>Jason</name></author><entry><title type="html">Deploy Online Video System</title><link href="http://localhost:4000/jekyll/2023-08-30-Deploy-Online-Video-System.html" rel="alternate" type="text/html" title="Deploy Online Video System" /><published>2023-08-30T00:00:00-04:00</published><updated>2023-08-30T00:00:00-04:00</updated><id>http://localhost:4000/jekyll/Deploy-Online-Video-System</id><content type="html" xml:base="http://localhost:4000/jekyll/2023-08-30-Deploy-Online-Video-System.html"><![CDATA[<h2 id="1-download-necessary-file">1. Download Necessary File</h2>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/Jas000n/online_video_sys.git
@@ -33,7 +33,7 @@ spring.datasource.password<span class="o">=</span>YOUR_PASSWORD
 
 <p>It should look like this:</p>
 
-<p><img src="/assets/pics/Deploy_Online_Video_System/demo.gif" alt="demo" /></p>]]></content><author><name>Jason</name></author><category term="Jekyll" /><summary type="html"><![CDATA[1. Download Necessary File]]></summary></entry><entry><title type="html">Wireshark Unleashed:Popular Tricks and Insights</title><link href="http://localhost:4000/jekyll/2023-08-30-Fun-With-Wireshark.html" rel="alternate" type="text/html" title="Wireshark Unleashed:Popular Tricks and Insights" /><published>2023-08-30T00:00:00-04:00</published><updated>2023-08-30T00:00:00-04:00</updated><id>http://localhost:4000/jekyll/Fun-With-Wireshark</id><content type="html" xml:base="http://localhost:4000/jekyll/2023-08-30-Fun-With-Wireshark.html"><![CDATA[<h1 id="tracking-traffic">Tracking Traffic</h1>
+<p><img src="/assets/pics/Deploy_Online_Video_System/demo.gif" alt="demo" /></p>]]></content><author><name>Jason</name></author><category term="Jekyll" /><summary type="html"><![CDATA[1. Download Necessary File]]></summary></entry><entry><title type="html">Wireshark Unleashed:Popular Tricks and Insights</title><link href="http://localhost:4000/jekyll/2023-08-30-Fun-With-Wireshark.html" rel="alternate" type="text/html" title="Wireshark Unleashed:Popular Tricks and Insights" /><published>2023-08-30T00:00:00-04:00</published><updated>2023-08-30T00:00:00-04:00</updated><id>http://localhost:4000/jekyll/Fun-With-Wireshark</id><content type="html" xml:base="http://localhost:4000/jekyll/2023-08-30-Fun-With-Wireshark.html"><![CDATA[<h2 id="1-tracking-traffic">1. Tracking Traffic</h2>
 <p>Wireshark offers a feature called “statistics,” which aids in honing in on specific conversations or endpoints.
 It’s found on the navigation bar. For this task, we will select ‘conversation’.
 <img src="/assets/pics/wireshark/tracking_traffic.png" alt="Tracking_traffic" />
@@ -42,7 +42,7 @@ In the image below, it’s clear that the highlighted row represents the most ac
 Right-click on the conversation and choose “Apply a-&gt;b as Filter &gt; Selected”. In the main Wireshark window, you can then determine the total packets and bytes from a-&gt;b, and vice versa for b-&gt;a.
 <img src="/assets/pics/wireshark/tracking_traffic3.png" alt="Tracking_traffic" /></p>
 
-<h1 id="detect-http">Detect HTTP</h1>
+<h2 id="2-detect-http">2. Detect HTTP</h2>
 <p>I will first use a filter to display the HTTP response time for each HTTP request.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http.time
@@ -51,7 +51,7 @@ Right-click on the conversation and choose “Apply a-&gt;b as Filter &gt; Selec
 Right-click on the top of the panel and choose “Column Preferences”. In the pop-up window, click ‘+’. In the field, enter “http.time”. For the type, select “Custom”, and for the title, input “HTTP Response Time”.
 <img src="/assets/pics/wireshark/Detect_HTTP1.png" alt="Detect HTTP" />
 Next, I will introduce several HTTP status codes and explain their meanings.</p>
-<h3 id="http-response-code">HTTP Response CODE</h3>
+<h3 id="21-http-response-code">2.1 HTTP Response CODE</h3>
 <p>HTTP response status codes are categorized into five classes:</p>
 <ul>
   <li>1xx indicates informational responses, suggesting the request has been received and is under processing;</li>
@@ -61,12 +61,12 @@ Next, I will introduce several HTTP status codes and explain their meanings.</p>
   <li>5xx signifies server errors, indicating the server failed to fulfill a valid request.</li>
 </ul>
 
-<h1 id="ftp-fundamentals">FTP Fundamentals</h1>
+<h2 id="3-ftp-fundamentals">3. FTP Fundamentals</h2>
 <p>To display FTP request and response packets in Wireshark, use the following filter:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftp
 </code></pre></div></div>
 <p>If you specifically want to filter for FTP requests only, you might use filters like ftp.request. Conversely, for responses, a filter such as ftp.response might be applicable.</p>
-<h3 id="ftp-respnse-code">FTP Respnse CODE</h3>
+<h3 id="31-ftp-respnse-code">3.1 FTP Respnse CODE</h3>
 <p>FTP (File Transfer Protocol) utilizes three-digit response codes to signify the status of client requests.</p>
 <ul>
   <li>Preliminary replies (1xx) suggest an action started but await another reply, such as 150 indicating the file status is okay.</li>
@@ -76,7 +76,7 @@ Next, I will introduce several HTTP status codes and explain their meanings.</p>
   <li>Permanent negative completion replies (5xx) represent definitive action failure, with codes like 550 showing the requested action wasn’t taken due to file unavailability.</li>
 </ul>
 
-<h1 id="dhcp-decoded">DHCP Decoded</h1>
+<h2 id="4-dhcp-decoded">4. DHCP Decoded</h2>
 <ul>
   <li>Layer of the OSI model:
 DHCP Discover packets can be found at the Application Layer (Layer 7) of the OSI model. However, when discussing protocols in terms of the OSI model, it’s important to note that DHCP primarily operates at the Application Layer, but it also uses functionalities of the Transport Layer and Network Layer for its operations.</li>
@@ -99,8 +99,8 @@ The DHCP Discover packet is the first step in the DHCP four-step process (Discov
   </li>
 </ul>
 
-<h1 id="dns-demystified">DNS Demystified</h1>
-<p>DNS (Domain Name System) queries primarily use the UDP (User Datagram Protocol) as their transport layer protocol. Specifically, DNS queries typically use UDP on port 53. However, it’s worth noting that DNS can also use TCP (Transmission Control Protocol) for tasks that require reliable delivery, such as zone transfers or when the response data size exceeds 512 bytes and cannot be fit into a single UDP packet. In those cases, DNS also uses TCP on port 53.</p>]]></content><author><name>Jason</name></author><category term="Jekyll" /><summary type="html"><![CDATA[Tracking Traffic Wireshark offers a feature called “statistics,” which aids in honing in on specific conversations or endpoints. It’s found on the navigation bar. For this task, we will select ‘conversation’. In the image below, it’s clear that the highlighted row represents the most active conversation. Right-click on the conversation and choose “Apply a-&gt;b as Filter &gt; Selected”. In the main Wireshark window, you can then determine the total packets and bytes from a-&gt;b, and vice versa for b-&gt;a.]]></summary></entry><entry><title type="html">Biliup</title><link href="http://localhost:4000/jekyll/2023-02-08-biliup.html" rel="alternate" type="text/html" title="Biliup" /><published>2023-02-08T00:00:00-05:00</published><updated>2023-02-08T00:00:00-05:00</updated><id>http://localhost:4000/jekyll/biliup</id><content type="html" xml:base="http://localhost:4000/jekyll/2023-02-08-biliup.html"><![CDATA[<h1 id="biliup自动录制投稿工具">BiliUp自动录制投稿工具</h1>
+<h2 id="5-dns-demystified">5. DNS Demystified</h2>
+<p>DNS (Domain Name System) queries primarily use the UDP (User Datagram Protocol) as their transport layer protocol. Specifically, DNS queries typically use UDP on port 53. However, it’s worth noting that DNS can also use TCP (Transmission Control Protocol) for tasks that require reliable delivery, such as zone transfers or when the response data size exceeds 512 bytes and cannot be fit into a single UDP packet. In those cases, DNS also uses TCP on port 53.</p>]]></content><author><name>Jason</name></author><category term="Jekyll" /><summary type="html"><![CDATA[1. Tracking Traffic Wireshark offers a feature called “statistics,” which aids in honing in on specific conversations or endpoints. It’s found on the navigation bar. For this task, we will select ‘conversation’. In the image below, it’s clear that the highlighted row represents the most active conversation. Right-click on the conversation and choose “Apply a-&gt;b as Filter &gt; Selected”. In the main Wireshark window, you can then determine the total packets and bytes from a-&gt;b, and vice versa for b-&gt;a.]]></summary></entry><entry><title type="html">Biliup</title><link href="http://localhost:4000/jekyll/2023-02-08-biliup.html" rel="alternate" type="text/html" title="Biliup" /><published>2023-02-08T00:00:00-05:00</published><updated>2023-02-08T00:00:00-05:00</updated><id>http://localhost:4000/jekyll/biliup</id><content type="html" xml:base="http://localhost:4000/jekyll/2023-02-08-biliup.html"><![CDATA[<h1 id="biliup自动录制投稿工具">BiliUp自动录制投稿工具</h1>
 <p>自动录制平台主播上传至B站投稿</p>
 <h2 id="1-安装">1. 安装</h2>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>biliup

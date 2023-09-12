@@ -127,7 +127,7 @@
                             </a>
                             
                                 
-                                    <ul><li><a href="#tracking-traffic">Tracking Traffic</a></li><li><a href="#detect-http">Detect HTTP</a><ul><li><a href="#http-response-code">HTTP Response CODE</a></li></ul></li></ul></li><li><a href="#ftp-fundamentals">FTP Fundamentals</a><ul><li><a href="#ftp-respnse-code">FTP Respnse CODE</a></li></ul></li></ul></li><li><a href="#dhcp-decoded">DHCP Decoded</a></li><li><a href="#dns-demystified">DNS Demystified</a></li></ul>
+                                    <ul><li><a href="#1-tracking-traffic">1. Tracking Traffic</a></li><li><a href="#2-detect-http">2. Detect HTTP</a><ul><li><a href="#21-http-response-code">2.1 HTTP Response CODE</a></li></ul></li><li><a href="#3-ftp-fundamentals">3. FTP Fundamentals</a><ul><li><a href="#31-ftp-respnse-code">3.1 FTP Respnse CODE</a></li></ul></li><li><a href="#4-dhcp-decoded">4. DHCP Decoded</a></li><li><a href="#5-dns-demystified">5. DNS Demystified</a></li></ul>
 
                                 
                             
@@ -166,7 +166,7 @@
                         <h1 id="/jekyll/Fun-With-Wireshark">Wireshark Unleashed:Popular Tricks and Insights</h1>
                     
 
-                    <h1 id="tracking-traffic">Tracking Traffic</h1>
+                    <h2 id="1-tracking-traffic">1. Tracking Traffic</h2>
 <p>Wireshark offers a feature called “statistics,” which aids in honing in on specific conversations or endpoints.
 It’s found on the navigation bar. For this task, we will select ‘conversation’.
 <img src="/assets/pics/wireshark/tracking_traffic.png" alt="Tracking_traffic" />
@@ -175,7 +175,7 @@ In the image below, it’s clear that the highlighted row represents the most ac
 Right-click on the conversation and choose “Apply a-&gt;b as Filter &gt; Selected”. In the main Wireshark window, you can then determine the total packets and bytes from a-&gt;b, and vice versa for b-&gt;a.
 <img src="/assets/pics/wireshark/tracking_traffic3.png" alt="Tracking_traffic" /></p>
 
-<h1 id="detect-http">Detect HTTP</h1>
+<h2 id="2-detect-http">2. Detect HTTP</h2>
 <p>I will first use a filter to display the HTTP response time for each HTTP request.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http.time
@@ -184,7 +184,7 @@ Right-click on the conversation and choose “Apply a-&gt;b as Filter &gt; Selec
 Right-click on the top of the panel and choose “Column Preferences”. In the pop-up window, click ‘+’. In the field, enter “http.time”. For the type, select “Custom”, and for the title, input “HTTP Response Time”.
 <img src="/assets/pics/wireshark/Detect_HTTP1.png" alt="Detect HTTP" />
 Next, I will introduce several HTTP status codes and explain their meanings.</p>
-<h3 id="http-response-code">HTTP Response CODE</h3>
+<h3 id="21-http-response-code">2.1 HTTP Response CODE</h3>
 <p>HTTP response status codes are categorized into five classes:</p>
 <ul>
   <li>1xx indicates informational responses, suggesting the request has been received and is under processing;</li>
@@ -194,12 +194,12 @@ Next, I will introduce several HTTP status codes and explain their meanings.</p>
   <li>5xx signifies server errors, indicating the server failed to fulfill a valid request.</li>
 </ul>
 
-<h1 id="ftp-fundamentals">FTP Fundamentals</h1>
+<h2 id="3-ftp-fundamentals">3. FTP Fundamentals</h2>
 <p>To display FTP request and response packets in Wireshark, use the following filter:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftp
 </code></pre></div></div>
 <p>If you specifically want to filter for FTP requests only, you might use filters like ftp.request. Conversely, for responses, a filter such as ftp.response might be applicable.</p>
-<h3 id="ftp-respnse-code">FTP Respnse CODE</h3>
+<h3 id="31-ftp-respnse-code">3.1 FTP Respnse CODE</h3>
 <p>FTP (File Transfer Protocol) utilizes three-digit response codes to signify the status of client requests.</p>
 <ul>
   <li>Preliminary replies (1xx) suggest an action started but await another reply, such as 150 indicating the file status is okay.</li>
@@ -209,7 +209,7 @@ Next, I will introduce several HTTP status codes and explain their meanings.</p>
   <li>Permanent negative completion replies (5xx) represent definitive action failure, with codes like 550 showing the requested action wasn’t taken due to file unavailability.</li>
 </ul>
 
-<h1 id="dhcp-decoded">DHCP Decoded</h1>
+<h2 id="4-dhcp-decoded">4. DHCP Decoded</h2>
 <ul>
   <li>Layer of the OSI model:
 DHCP Discover packets can be found at the Application Layer (Layer 7) of the OSI model. However, when discussing protocols in terms of the OSI model, it’s important to note that DHCP primarily operates at the Application Layer, but it also uses functionalities of the Transport Layer and Network Layer for its operations.</li>
@@ -232,7 +232,7 @@ The DHCP Discover packet is the first step in the DHCP four-step process (Discov
   </li>
 </ul>
 
-<h1 id="dns-demystified">DNS Demystified</h1>
+<h2 id="5-dns-demystified">5. DNS Demystified</h2>
 <p>DNS (Domain Name System) queries primarily use the UDP (User Datagram Protocol) as their transport layer protocol. Specifically, DNS queries typically use UDP on port 53. However, it’s worth noting that DNS can also use TCP (Transmission Control Protocol) for tasks that require reliable delivery, such as zone transfers or when the response data size exceeds 512 bytes and cannot be fit into a single UDP packet. In those cases, DNS also uses TCP on port 53.</p>
 
                 </section>
@@ -361,7 +361,7 @@ MathJax = {
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2023-09-11 22:23:13 -0400"
+        "time": "2023-09-11 22:26:14 -0400"
     },
     "basePath": "",
     "book": {
