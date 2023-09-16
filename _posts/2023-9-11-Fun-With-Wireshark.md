@@ -1,7 +1,7 @@
 ---
-title: Wireshark Unleashed:Popular Tricks and Insights
+title: Double the Fun: How to Seamlessly Run VMware on Your Ubuntu System
 author: Jason
-date: 2023-08-30
+date: 2023-9-16
 category: Jekyll
 layout: post
 
@@ -61,7 +61,7 @@ DHCP Discover is a broadcast packet. It's the initial message sent by a client w
   * Port Numbers:
     * Source Port:68 (DHCP clients use this port to communicate with servers.)
     * Destination Port:67 (DHCP servers listen on this port for client requests.)
-The DHCP Discover packet is the first step in the DHCP four-step process (Discover, Offer, Request, and Acknowledge) used to obtain network configuration parameters from the DHCP server. 
+    The DHCP Discover packet is the first step in the DHCP four-step process (Discover, Offer, Request, and Acknowledge) used to obtain network configuration parameters from the DHCP server. 
 
 ## 5. DNS Demystified
 DNS (Domain Name System) queries primarily use the UDP (User Datagram Protocol) as their transport layer protocol. Specifically, DNS queries typically use UDP on port 53. However, it's worth noting that DNS can also use TCP (Transmission Control Protocol) for tasks that require reliable delivery, such as zone transfers or when the response data size exceeds 512 bytes and cannot be fit into a single UDP packet. In those cases, DNS also uses TCP on port 53.
