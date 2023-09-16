@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Biliup · Jason&#39;s Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Wireshark Unleashed:Popular Tricks and Insights · Jason&#39;s Blog</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Jason's online notes, articles and documents.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Jason"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -22,11 +22,11 @@
 
 
 
-            <link rel="prev" href="/" />
+            <link rel="prev" href="/jekyll/2023-08-30-Deploy-Online-Video-System.html" />
         
 
         
-            <link rel="next" href="/jekyll/2023-08-30-Deploy-Online-Video-System.html" />
+            <link rel="next" href="/jekyll/2023-09-16-VMware-on-Ubuntu.html" />
         
     </head>
     <body>
@@ -100,15 +100,12 @@
 
                     
                         
-                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2023-02-08-biliup.html">
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2023-02-08-biliup.html">
                         
                             <a href="/jekyll/2023-02-08-biliup.html">
                                 Biliup
                             </a>
                             
-                                
-                                    <ul><li><a href="#biliup自动录制投稿工具">BiliUp自动录制投稿工具</a><ul><li><a href="#1-安装">1. 安装</a></li><li><a href="#2-录制">2. 录制</a></li><li><a href="#3-投稿到b站">3. 投稿到b站</a></li></ul></li></ul>
-
                                 
                             
                         </li>
@@ -125,12 +122,15 @@
                         </li>
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll/2023-09-16-Fun-With-Wireshark.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2023-09-16-Fun-With-Wireshark.html">
                         
                             <a href="/jekyll/2023-09-16-Fun-With-Wireshark.html">
                                 Wireshark Unleashed:Popular Tricks and Insights
                             </a>
                             
+                                
+                                    <ul><li><a href="#1-tracking-traffic">1. Tracking Traffic</a></li><li><a href="#2-detect-http">2. Detect HTTP</a><ul><li><a href="#21-http-response-code">2.1 HTTP Response CODE</a></li></ul></li><li><a href="#3-ftp-fundamentals">3. FTP Fundamentals</a><ul><li><a href="#31-ftp-respnse-code">3.1 FTP Respnse CODE</a></li></ul></li><li><a href="#4-dhcp-decoded">4. DHCP Decoded</a></li><li><a href="#5-dns-demystified">5. DNS Demystified</a></li></ul>
+
                                 
                             
                         </li>
@@ -163,19 +163,12 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Biliup</a>
+                            <a href="." >Wireshark Unleashed:Popular Tricks and Insights</a>
                         
                     </h1>
                 </div>
 
                 <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
-    
-        <img src="/assets/pics/biliup/bilibili_1750x632.jpg"
-             width="100%"
-             height="100%"
-             alt="Biliup"
-             style="object-fit: cover;"
-        />
     
 
     <div class="page-inner">
@@ -183,67 +176,77 @@
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/jekyll/biliup">Biliup</h1>
+                        <h1 id="/jekyll/Fun-With-Wireshark">Wireshark Unleashed:Popular Tricks and Insights</h1>
                     
 
-                    <h1 id="biliup自动录制投稿工具">BiliUp自动录制投稿工具</h1>
-<p>自动录制平台主播上传至B站投稿</p>
-<h2 id="1-安装">1. 安装</h2>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>biliup
+                    <h2 id="1-tracking-traffic">1. Tracking Traffic</h2>
+<p>Wireshark offers a feature called “statistics,” which aids in honing in on specific conversations or endpoints.
+It’s found on the navigation bar. For this task, we will select ‘conversation’.
+<img src="/assets/pics/wireshark/tracking_traffic.png" alt="Tracking_traffic" />
+In the image below, it’s clear that the highlighted row represents the most active conversation.
+<img src="/assets/pics/wireshark/tracking_traffic2.png" alt="Tracking_traffic" />
+Right-click on the conversation and choose “Apply a-&gt;b as Filter &gt; Selected”. In the main Wireshark window, you can then determine the total packets and bytes from a-&gt;b, and vice versa for b-&gt;a.
+<img src="/assets/pics/wireshark/tracking_traffic3.png" alt="Tracking_traffic" /></p>
 
-pip <span class="nb">install </span>quickjs
+<h2 id="2-detect-http">2. Detect HTTP</h2>
+<p>I will first use a filter to display the HTTP response time for each HTTP request.</p>
 
-<span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>nodejs <span class="nt">-y</span>
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http.time
 </code></pre></div></div>
-<h2 id="2-录制">2. 录制</h2>
-<p>创建文件夹：</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>biliup_home
-
-<span class="nb">cd </span>biliup_home
-
-</code></pre></div></div>
-<p>编写配置文件：</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim config.toml
-
-</code></pre></div></div>
-<p>将以下内容写入：</p>
-<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 以下为必填项</span>
-<span class="nn">[streamers."1xx直播录像"]</span> <span class="c"># 设置直播间1</span>
-<span class="py">url</span> <span class="p">=</span> <span class="p">[</span><span class="s">"https://www.twitch.tv/1xx"</span><span class="p">]</span>
-<span class="py">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s">"biliup"</span><span class="p">]</span>
-
-<span class="nn">[streamers."2xx直播录像"]</span> <span class="c"># 设置直播间2</span>
-<span class="py">url</span> <span class="p">=</span> <span class="p">[</span><span class="s">"https://www.twitch.tv/2xx"</span><span class="p">]</span>
-<span class="py">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s">"biliup"</span><span class="p">]</span>
-</code></pre></div></div>
+<p>To analyze and inspect these packets and data, I’ll introduce a custom column at the beginning of the panel.
+Right-click on the top of the panel and choose “Column Preferences”. In the pop-up window, click ‘+’. In the field, enter “http.time”. For the type, select “Custom”, and for the title, input “HTTP Response Time”.
+<img src="/assets/pics/wireshark/Detect_HTTP1.png" alt="Detect HTTP" />
+Next, I will introduce several HTTP status codes and explain their meanings.</p>
+<h3 id="21-http-response-code">2.1 HTTP Response CODE</h3>
+<p>HTTP response status codes are categorized into five classes:</p>
 <ul>
-  <li>tags为稿件标签，随意填写，如“主播录制”，“炉石传说”等，但不能超过12个</li>
-  <li>streamers为投稿稿件名字</li>
-  <li>url为直播间地址</li>
+  <li>1xx indicates informational responses, suggesting the request has been received and is under processing;</li>
+  <li>2xx indicates success, meaning the request was successfully received, understood, and accepted;</li>
+  <li>3xx points to redirection, implying that further action is required by the client to complete the request;</li>
+  <li>4xx represents client errors, suggesting that there seems to be a mistake made by the client;</li>
+  <li>5xx signifies server errors, indicating the server failed to fulfill a valid request.</li>
 </ul>
 
-<p>开始录制</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>biliup start
+<h2 id="3-ftp-fundamentals">3. FTP Fundamentals</h2>
+<p>To display FTP request and response packets in Wireshark, use the following filter:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ftp
 </code></pre></div></div>
-<p>检查脚本是否正确运行</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps <span class="nt">-A</span> |grep biliup <span class="c">#能找到进程则运行成功</span>
-</code></pre></div></div>
-<h2 id="3-投稿到b站">3. 投稿到b站</h2>
-<p>根据自己的机器去https://github.com/ForgQi/biliup-rs/releases找匹配的可执行文件</p>
+<p>If you specifically want to filter for FTP requests only, you might use filters like ftp.request. Conversely, for responses, a filter such as ftp.response might be applicable.</p>
+<h3 id="31-ftp-respnse-code">3.1 FTP Respnse CODE</h3>
+<p>FTP (File Transfer Protocol) utilizes three-digit response codes to signify the status of client requests.</p>
+<ul>
+  <li>Preliminary replies (1xx) suggest an action started but await another reply, such as 150 indicating the file status is okay.</li>
+  <li>Completion replies (2xx) confirm a successful action, exemplified by 200 meaning “Command okay.”</li>
+  <li>Intermediate replies (3xx) denote more information is needed, like 331 which means “User name okay, need password.”</li>
+  <li>Transient negative completion replies (4xx) indicate a temporary rejection, with 421 suggesting the service isn’t available.</li>
+  <li>Permanent negative completion replies (5xx) represent definitive action failure, with codes like 550 showing the requested action wasn’t taken due to file unavailability.</li>
+</ul>
 
-<p>例如我的机器：linux, x86_64</p>
+<h2 id="4-dhcp-decoded">4. DHCP Decoded</h2>
+<ul>
+  <li>Layer of the OSI model:
+DHCP Discover packets can be found at the Application Layer (Layer 7) of the OSI model. However, when discussing protocols in terms of the OSI model, it’s important to note that DHCP primarily operates at the Application Layer, but it also uses functionalities of the Transport Layer and Network Layer for its operations.</li>
+  <li>
+    <p>Type of packet: 
+DHCP Discover is a broadcast packet. It’s the initial message sent by a client when it attempts to join a network and seeks to get IP configuration parameters, including an IP address from a DHCP server.</p>
+  </li>
+  <li>Source and Destination IP Addresses:
+    <ul>
+      <li>Source IP Address:** 0.0.0.0 (Because the client doesn’t have an assigned IP address yet.)</li>
+      <li>Destination IP Address:** 255.255.255.255 (This is a broadcast address, meaning the Discover packet is intended for all devices on the network.)</li>
+      <li>Port Numbers:
+        <ul>
+          <li>Source Port:68 (DHCP clients use this port to communicate with servers.)</li>
+          <li>Destination Port:67 (DHCP servers listen on this port for client requests.)
+The DHCP Discover packet is the first step in the DHCP four-step process (Discover, Offer, Request, and Acknowledge) used to obtain network configuration parameters from the DHCP server.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-<p>下载文件：</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://github.com/ForgQi/biliup-rs/releases/download/v0.1.15/biliupR-v0.1.15-x86_64-linux.tar.xz
-</code></pre></div></div>
-<p>解压：</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar</span> <span class="nt">-xvJf</span> <span class="k">*</span>.tar.xz
-</code></pre></div></div>
-<p>登陆获得cookie：</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./biliup login
-</code></pre></div></div>
-<p>主播下播后会自动投稿，注意需要把cookie和config.toml放在同一级目录下。</p>
+<h2 id="5-dns-demystified">5. DNS Demystified</h2>
+<p>DNS (Domain Name System) queries primarily use the UDP (User Datagram Protocol) as their transport layer protocol. Specifically, DNS queries typically use UDP on port 53. However, it’s worth noting that DNS can also use TCP (Transmission Control Protocol) for tasks that require reliable delivery, such as zone transfers or when the response data size exceeds 512 bytes and cannot be fit into a single UDP packet. In those cases, DNS also uses TCP on port 53.</p>
 
                 </section>
             </div><div class="search-results">
@@ -273,13 +276,13 @@ MathJax = {
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
 </script>
 
-                        <a href="/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Jason's Blog">
+                        <a href="/jekyll/2023-08-30-Deploy-Online-Video-System.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Deploy Online Video System">
                             <i class="fa fa-angle-left"></i>
                         </a>
                     
 
                     
-                        <a href="/jekyll/2023-08-30-Deploy-Online-Video-System.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Deploy Online Video System">
+                        <a href="/jekyll/2023-09-16-VMware-on-Ubuntu.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Double the Fun:How to Seamlessly Run VMware on Your Ubuntu System">
                             <i class="fa fa-angle-right"></i>
                         </a>
                     
@@ -296,11 +299,11 @@ MathJax = {
         "depth": 1,
         
         "next": {
-            "title": "Deploy Online Video System",
+            "title": "Double the Fun:How to Seamlessly Run VMware on Your Ubuntu System",
             "level": "1.2",
             "depth": 1,
-            "path": "_posts/2023-8-30-Deploy-Online-Video-System.md",
-            "ref": "_posts/2023-8-30-Deploy-Online-Video-System.md",
+            "path": "_posts/2023-9-16-VMware-on-Ubuntu.md",
+            "ref": "_posts/2023-9-16-VMware-on-Ubuntu.md",
             "articles": []
         },
         
@@ -378,8 +381,8 @@ MathJax = {
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2023-2-9-biliup.md",
-        "mtime": "2023-02-08 00:00:00 -0500",
+        "path": "_posts/2023-9-11-Fun-With-Wireshark.md",
+        "mtime": "2023-09-16 00:00:00 -0400",
         "type": "markdown"
     },
     "gitbook": {
