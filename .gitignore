@@ -1,0 +1,13 @@
+.DS_Store
+assets/.DS_Store
+assets/pics/.DS_Store
+/_site/
+/.idea
+_site/
+.jekyll-cache/
+vendor/
+
+# Optional
+Gemfile.lock
+# IDE specific files
+.vscode/
