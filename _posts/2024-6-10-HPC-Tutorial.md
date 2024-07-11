@@ -14,8 +14,8 @@ A special focus will be given to working with Singularity containers and overlay
 
 # 1. Create dir for all overlay images
 ```shell
-mkdir /scratch/<NetID>/overlay_images
-cd /scratch/<NetID>/overlay_images
+mkdir /scratch/$USER/overlay_images
+cd /scratch/$USER/overlay_images
 ```
 # 2. Browse and copy an appropriate gzipped overlay images from the overlay directory
 ```shell
@@ -87,9 +87,9 @@ paste the following script:
 module purge
 
 singularity exec --nv \
-	    --overlay /scratch/netID/overlay_images/my_pytorch.ext3:ro \
+	    --overlay /scratch/$USER/overlay_images/my_pytorch.ext3:ro \
 	    /scratch/work/public/singularity/cuda11.3.0-cudnn8-devel-ubuntu20.04.sif\
-	    /bin/bash -c "source /ext3/env.sh; conda activate myenv; cd /scratch/<netID>/myProject/;nohup python training.py &"
+	    /bin/bash -c "source /ext3/env.sh; conda activate myenv; cd /scratch/$USER/myProject/;nohup python training.py &"
 
 ```
 submit that job to slurm:
@@ -98,5 +98,5 @@ sbatch my_sbatch.sbatch
 ```
 # 8. Check job status
 ```shell
-squeue -u netID
+squeue -u $USER
 ```
