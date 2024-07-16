@@ -24,7 +24,7 @@ ls /scratch/work/public/overlay-fs-ext3
 
 # copy a suitable one for your environment
 cp -rp /scratch/work/public/overlay-fs-ext3/overlay-50G-10M.ext3.gz .
-gunzip overlay-50G-10M.ext3.gz # unzip might take a while time on login node
+gunzip overlay-50G-10M.ext3.gz # unzip might take a while on login node
 
 # rename that image to your project 
 mv overlay-50G-10M.ext3 my_pytorch.ext3
