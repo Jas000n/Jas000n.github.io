@@ -6,7 +6,7 @@ permalink: /
 
 ## Education
 * NEU 
-  * BE in Software Engineer
+  * BE in Software Engineering
 * NYU 
   * MS in Computer Science
 ## Experience
