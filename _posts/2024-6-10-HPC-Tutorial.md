@@ -39,7 +39,7 @@ ls /scratch/work/public/singularity/
 srun --cpus-per-task=2 --mem=10GB --time=04:00:00 --pty /bin/bash
 # wait to be assigned a node
 
-singularity exec xec --nv --overlay my_pytorch.ext3:rw /scratch/work/public/singularity/cuda11.6.124-cudnn8.4.0.27-devel-ubuntu20.04.4.sif /bin/bash
+singularity exec --nv --overlay my_pytorch.ext3:rw /scratch/work/public/singularity/cuda11.6.124-cudnn8.4.0.27-devel-ubuntu20.04.4.sif /bin/bash
 
 ```
 # 5. Install Miniconda and create a wrapper script
