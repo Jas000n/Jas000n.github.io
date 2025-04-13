@@ -12,7 +12,7 @@ An AI researcher with a strong background in software engineering, I excel at ma
   - Master of Science in CS
 
 ## Experience
-- TA for CS6233 Operating System (Sep. 2024 - Present)
+- TA for CS6233 Operating System (Sep. 2024 - Dec. 2024)
 - RA at NYU AI4CE Lab (Jan. 2024 - Present)
 - RA at Bosch  (Jun. 2024 - Present)
 
