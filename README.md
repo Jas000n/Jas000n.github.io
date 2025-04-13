@@ -16,5 +16,8 @@ An AI researcher with a strong background in software engineering, I excel at ma
 - RA at NYU AI4CE Lab (Jan. 2024 - Present)
 - RA at Bosch  (Jun. 2024 - Present)
 
+## Links
+- [Paper Bot](https://jas000n.github.io/PaperBot/)
+
 ## Page Views 👀 
 - ![](https://komarev.com/ghpvc/?username=Jas000n&style=for-the-badge)
