@@ -13,8 +13,8 @@ An AI researcher with a strong background in software engineering, I excel at ma
 
 ## Experience
 - TA for CS6233 Operating System (Sep. 2024 - Dec. 2024)
-- RA at NYU AI4CE Lab (Jan. 2024 - Present)
-- Conduct research under NYU Prof. Feng with Bosch on joint research (Jun. 2024 - Present)
+- RA at NYU AI4CE Lab (Jan. 2024 - May. 2025)
+- Conduct research under NYU Prof. Feng with Bosch on joint research (Jun. 2024 - May. 2025)
 
 ## Links
 - [Paper Bot](https://jas000n.github.io/PaperBot/)
