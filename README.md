@@ -10,6 +10,8 @@ An AI researcher with a strong background in software engineering, I excel at ma
   - Bachelor of Engineering in SE
 - NYU 
   - Master of Science in CS
+- UFL
+  - Ph.D. Student in CVE
 
 ## Experience
 - TA for CS6233 Operating System (Sep. 2024 - Dec. 2024)
