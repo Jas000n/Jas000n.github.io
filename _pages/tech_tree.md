@@ -35,6 +35,7 @@ description: A structured overview of my learning progress across AI, robotics, 
    1. ROS
    2. Kinematics
    3. Automatic Control Theory
+   4. Raspberry Pi
 2. Simulation
    1. CARLA
    2. Isaac Sim
@@ -43,3 +44,4 @@ description: A structured overview of my learning progress across AI, robotics, 
 1. Linux Operating System
 2. Java, Python, CPP, Shell, Swift, SQL, JS.....
 3. Software Architecture & Deployment (Docker, CI/CD, Git)
+4. Website, Smartphone APP, ....
