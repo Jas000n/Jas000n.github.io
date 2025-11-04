@@ -6,7 +6,7 @@ permalink: /
 ## Introduction
 An AI researcher with a strong background in software engineering, I excel at mastering new tools and tackling complex challenges efficiently. With a proven track record in handling LIDAR point clouds, occupancy prediction and End2End driving, I am eager to apply my technical skills to advance research in 3D vision, integrating deep learning into autonomous systems.
 ## Education
-- NEU 
+- NEU(shenyang, China)
   - Bachelor of Engineering in SE
 - NYU 
   - Master of Science in CS
