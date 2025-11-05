@@ -22,7 +22,7 @@ description: A structured overview of my learning progress across AI, robotics, 
 2. Language Model
    1. pre-training
    2. post-training
-      1. fine tuning
+      1. Supervised fine tuning
       2. RL
 3. Robotics
    1. VLA
