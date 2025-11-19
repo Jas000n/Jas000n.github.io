@@ -78,7 +78,7 @@ Paste:
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=3
-# SBATCH --gres=gpu:b200:4     # Uncomment if you need GPUs
+# #SBATCH --gres=gpu:b200:4     # Uncomment if you need GPUs
 #SBATCH --mem=16GB
 #SBATCH --time=00:20:00
 #SBATCH --output=my_first_job_%j.log
