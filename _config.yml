@@ -1,16 +1,16 @@
 # Configurations
-title:            Jason's Blog
-longtitle:        Jason's online secret garden
-author:           Jason
-email:            ysyysy2001@126.com
+title: Jason's Blog
+longtitle: Jason's online secret garden
+author: Jason
+email: ysyysy2001@126.com
 description: >
   Jason's online notes, articles and documents.
 
-version:          1.0
-gitbook_version:  3.2.3
+version: 1.0
+gitbook_version: 3.2.3
 
-url:              'https://Jas000n.github.io'
-rss:              RSS
+url: "https://Jas000n.github.io"
+rss: RSS
 
 # bootstrap: use the remote theme for the site itself
 remote_theme: sighingnow/jekyll-gitbook
@@ -21,26 +21,26 @@ toc:
   h_max: 3
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
-favicon_path:     /assets/gitbook/images/favicon.ico
+favicon_path: /assets/gitbook/images/favicon.ico
 
 # markdown render engine.
-markdown:         kramdown
+markdown: kramdown
 kramdown:
-  auto_ids:               true
-  input:                  GFM
-  math_engine:            mathjax
-  smart_quotes:           lsquo,rsquo,ldquo,rdquo
-  toc_levels:             1..6
-  syntax_highlighter:     rouge
+  auto_ids: true
+  input: GFM
+  math_engine: mathjax
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  toc_levels: 1..6
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    guess_lang:           true
+    guess_lang: true
 
 syntax_highlighter_style: colorful
 
-markdown_ext:     markdown,mkdown,mkdn,mkd,md
+markdown_ext: markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
-permalink:        /:categories/:year-:month-:day-:title:output_ext
+permalink: /:categories/:year-:month-:day-:title:output_ext
 
 exclude:
   - _drafts
@@ -52,9 +52,9 @@ collections:
 
 page_width: 800px
 
-destination:      ./_site
-incremental:      false
-regenerate:       true
+destination: ./_site
+incremental: false
+regenerate: true
 
 plugins:
   - jekyll-feed

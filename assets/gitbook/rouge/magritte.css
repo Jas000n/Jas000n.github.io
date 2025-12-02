@@ -1,5 +1,9 @@
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
+.highlight table td {
+  padding: 5px;
+}
+.highlight table pre {
+  margin: 0;
+}
 .highlight {
   color: #000707;
   background-color: #f3ffff;
@@ -8,7 +12,13 @@
   color: #f3ffff;
   background-color: #000707;
 }
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+.highlight .c,
+.highlight .ch,
+.highlight .cd,
+.highlight .cm,
+.highlight .cpf,
+.highlight .c1,
+.highlight .cs {
   color: #006c6c;
   font-style: italic;
 }
@@ -25,15 +35,19 @@
   font-weight: bold;
   font-style: italic;
 }
-.highlight .k, .highlight .kd, .highlight .kv {
+.highlight .k,
+.highlight .kd,
+.highlight .kv {
   color: #19003a;
   font-weight: bold;
 }
-.highlight .o, .highlight .ow {
+.highlight .o,
+.highlight .ow {
   color: #4c48fe;
   font-weight: bold;
 }
-.highlight .p, .highlight .pi {
+.highlight .p,
+.highlight .pi {
   color: #4c48fe;
 }
 .highlight .gd {
@@ -112,7 +126,14 @@
   color: #840084;
   font-weight: bold;
 }
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+.highlight .m,
+.highlight .mb,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mx {
   color: #007500;
   font-weight: bold;
 }
@@ -123,7 +144,15 @@
 .highlight .ss {
   color: #007500;
 }
-.highlight .s, .highlight .sb, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .sr, .highlight .s1 {
+.highlight .s,
+.highlight .sb,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1 {
   color: #7c0000;
   font-weight: bold;
 }
@@ -151,12 +180,13 @@
   font-weight: bold;
 }
 .highlight .w {
-  color: #BBBBBB;
+  color: #bbbbbb;
 }
 .highlight .go {
   color: #19003a;
 }
-.highlight .nf, .highlight .fm {
+.highlight .nf,
+.highlight .fm {
   color: #ff0089;
 }
 .highlight .py {
@@ -165,7 +195,11 @@
 .highlight .na {
   color: #ff0089;
 }
-.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi, .highlight .vm {
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .vm {
   color: #ff0089;
   font-weight: bold;
 }

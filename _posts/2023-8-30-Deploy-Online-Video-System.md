@@ -8,8 +8,6 @@ layout: post
 cover: /assets/pics/Deploy_Online_Video_System/tech_stack.png
 ---
 
-
-
 ## 1. Download Necessary File
 
 ```shell
@@ -34,7 +32,7 @@ $ redis-server
 
 ## 3. Start Nacos
 
-```shell 
+```shell
 $ cd /YOUR_DIRECTORY/online_video_sys/Nacos/bin
 $ sh startup.sh -m standalone
 ```

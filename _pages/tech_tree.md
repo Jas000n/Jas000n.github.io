@@ -8,6 +8,7 @@ description: A structured overview of my learning progress across AI, robotics, 
 ---
 
 ## 1. Learning
+
 1. Perception
    1. 2D
       1. object detection
@@ -29,8 +30,9 @@ description: A structured overview of my learning progress across AI, robotics, 
    2. SLAM
 4. Generative
    1. Diffusion
-   
+
 ## 2. Robotics
+
 1. Hardware
    1. ROS
    2. Kinematics
@@ -41,6 +43,7 @@ description: A structured overview of my learning progress across AI, robotics, 
    2. Isaac Sim
 
 ## 3. Software Engineering
+
 1. Linux Operating System
 2. Java, Python, CPP, Shell, Swift, SQL, JS.....
 3. Software Architecture & Deployment (Docker, CI/CD, Git)
