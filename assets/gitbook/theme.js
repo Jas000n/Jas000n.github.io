@@ -1389,11 +1389,9 @@
                       s > 1 && g(c),
                       s > 1 &&
                         h(
-                          e
-                            .slice(0, s - 1)
-                            .concat({
-                              value: " " === e[s - 2].type ? "*" : "",
-                            }),
+                          e.slice(0, s - 1).concat({
+                            value: " " === e[s - 2].type ? "*" : "",
+                          }),
                         ).replace(se, "$1"),
                       n,
                       s < r && b(e.slice(s, r)),
