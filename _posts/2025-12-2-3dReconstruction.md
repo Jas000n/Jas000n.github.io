@@ -61,6 +61,7 @@ cover:
    - Sorting: Splats are sorted by depth (front-to-back) using a fast GPU Radix sort.
    - Alpha Blending: The sorted splats are composited to form the final image.
   ![gs](../assets/pics/reconstruction_3d/Gaussian.png)
+  ![gs](../assets/pics/reconstruction_3d/bicycle.gif)
 
 ### 4. LSS
 
