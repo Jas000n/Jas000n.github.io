@@ -70,7 +70,7 @@ cover:
     Then each pixel is lifted into multiple possible 3D positions using camera intrinsics/extrinsics.
    ![lift](../assets/pics/reconstruction_3d/lift.png)
 2. **Splat**  
-   All lifted 3D features are projected (“splatted”) onto a 2D BEV(bird eye's view) ground.  
+   All lifted 3D features are projected (“splatted”) onto a 2D BEV(bird's eye view) ground.  
    Features falling into the same BEV cell are aggregated, producing a BEV feature map.
 
 3. **Shoot**  
