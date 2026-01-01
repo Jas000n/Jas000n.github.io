@@ -6,15 +6,20 @@ category: Jekyll
 layout: post
 cover:
 ---
-# ROS w/ Docker
+
 
 ### ROS, Docker, and why this tutorial
-###### 1.1 what is ros and what is docker?
+##### 1.1 what is ros and what is docker?
 > ROS is a framework for building robot software components that communicate with each other.
-![alt text](../assets/pics/ROSwDocker/rosLarge.png)
+
+![alt text](/assets/pics/ROSwDocker/rosLarge.png){: style="width:20%; height:auto;" }
+
 > Docker is a tool for packaging software and its dependencies into containers so it runs the same anywhere.
-![alt text](../assets/pics/ROSwDocker/what-is-docker.png)
-###### 1.2 why we should use ros in docker
+
+![alt text](../assets/pics/ROSwDocker/what-is-docker.png){: style="width:20%; height:auto;" }
+
+##### 1.2 why we should use ros in docker
+
 | Ubuntu (LTS) | ROS distro typically tied to it |
 |---|---|
 | 16.04 (Xenial) | ROS 1 **Kinetic** |

@@ -10,3 +10,5 @@ gem 'jemoji'
 gem 'webrick'
 
 # gem "rails"
+
+gem "jekyll-sitemap", "~> 1.4", :group => :jekyll_plugins
