@@ -14,16 +14,16 @@ description: A structured overview of my learning progress across AI, robotics, 
       1. object detection
       2. semantic segmentation
       3. human pose estimation
-      4. VLM(clip)
+      4. VLM
    2. 3D
       1. depth
       2. 3d reconstruction
       3. occupancy prediction
-      4. 6dof pose estimation
+      4. pose estimation
 2. Language Model
    1. pre-training
    2. post-training
-      1. Supervised fine tuning
+      1. SFT
       2. RL
 3. Robotics
    1. VLA
@@ -45,6 +45,6 @@ description: A structured overview of my learning progress across AI, robotics, 
 ## 3. Software Engineering
 
 1. Linux Operating System
-2. Java, Python, CPP, Shell, Swift, SQL, JS.....
-3. Software Architecture & Deployment (Docker, CI/CD, Git)
+2. Java, Python, CPP, Shell, Swift, SQL, JS....
+3. Software Architecture & Deployment (Docker, CI/CD, Git....)
 4. Website, Smartphone APP, ....
