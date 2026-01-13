@@ -38,6 +38,7 @@ description: A structured overview of my learning progress across AI, robotics, 
    2. Kinematics
    3. Automatic Control Theory
    4. Raspberry Pi
+   5. 3D CAD (Fusion 360) & 3D Printing
 2. Simulation
    1. CARLA
    2. Isaac Sim
